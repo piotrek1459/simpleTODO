@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Add task
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="space">
+            <div class="col-12">
+                <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <form action="/task-update/{{ todo_id }}" method="post">
+                <div class="col-6 offset-3">
+                    <div class="mb-3">
+                        <label class="form-label">Title:</label>
+                        <input type="text" class="form-control" id="title" value="{{ task[2] }}" name="title">
+                    </div>
+                </div>
+                <div class="col-6 offset-3">
+                    <div class="mb-3">
+                        <label class="form-label">Description:</label>
+                        <textarea class="form-control" id="description" name="description" rows="6">{{ task[3] }}</textarea>
+                    </div>
+                </div>
+                <div class="col-6 offset-3">
+                    <div class="form-check">
+                        {% if task[4] == 1 %}
+                        <input class="form-check-input" type="checkbox" checked name="isComplete" id="isComplete">
+                        {% else %}
+                        <input class="form-check-input" type="checkbox" name="isComplete" id="isComplete">
+                        {% endif %}
+                        <label class="form-check-label">Complete</label>
+                    </div>
+                </div>
+                <div class="col-6 offset-3">
+                    <br>
+                    <button class="btn btn-secondary" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

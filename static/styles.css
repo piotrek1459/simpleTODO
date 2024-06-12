@@ -1,0 +1,81 @@
+body {
+    background-color: #212121;
+    color: #fff;
+    margin: 0;
+}
+
+.hiper {
+    margin-left: 3rem;
+}
+
+a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.fa-solid {
+    font-size: 3rem;
+}
+
+.fa-regular {
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: right;
+}
+
+.space {
+    padding: 3rem;
+    margin-top: 3rem;
+    background-color: #303030;
+}
+
+.col-2 {
+    text-align: right;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.col-10 {
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.task {
+    font-size: 3rem;
+    padding: 1rem;
+    border-bottom: #212121 dashed 5px;
+}
+
+.form-check-input {
+    margin-right: 1rem;
+}
+
+.header {
+    border-bottom: #212121 dashed 5px;
+    padding: 1rem;
+}
+
+.name {
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.help {
+    float: left;
+    margin-right: 2rem;
+}

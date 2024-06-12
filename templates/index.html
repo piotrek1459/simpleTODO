@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{{name}}'s TO-DO
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="space">
+            <div class="header">
+                <div class="name">
+                    <h2>Hello {{ name }},</h2>
+                </div>
+                <div class="plus">
+                    <a href="/task-create">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            {% for row in tasks %}
+
+            <div class="task">
+                <div class="row">
+                    <div class="col-10">
+                        {% if row[4] == 1%}
+                        <input class="form-check-input" onchange="this.checked = !this.checked" checked type="checkbox" name="done">
+                            <a href="/task-update/{{ row[0] }}" style="text-decoration: line-through;">{{ row[2] }}</a>
+                        {% else %}
+                        <input class="form-check-input" onchange="this.checked = !this.checked" type="checkbox" name="done">
+                        <a href="/task-update/{{ row[0] }}">{{ row[2] }}</a>
+                        {% endif %}
+                    </div>
+                    <div class="col-2">
+                        <a href="/task-delete/{{ row[0] }}"><i class="fa-regular fa-x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+</div>
+{% endblock %}

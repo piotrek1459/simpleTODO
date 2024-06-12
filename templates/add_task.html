@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Add task
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="space">
+            <div class="col-12">
+                <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <form action="/task-create" method="post">
+                <div class="col-6 offset-3">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title:</label>
+                        <input type="text" class="form-control" id="title" name="title">
+                    </div>
+                </div>
+                <div class="col-6 offset-3">
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description:</label>
+                        <textarea class="form-control" id="description" name="description" rows="6"></textarea>
+                    </div>
+                </div>
+                <div class="col-6 offset-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="isComplete" id="isComplete">
+                        <label for="check" class="form-check-label">Complete</label>
+                    </div>
+                </div>
+                <div class="col-6 offset-3">
+                    <br>
+                    <button class="btn btn-secondary" type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
